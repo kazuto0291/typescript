@@ -8,3 +8,14 @@ let back = `hello`;
 let hello: string;
 hello = 'hello';
 
+const person = {
+  name: {
+    first: 'jack',
+    last: 'smith'
+  },
+  age: 21
+}
+const fruits = ['apple', 'banana', 'grape']
+const fruit = fruits[0];
+
+console.log(person);
