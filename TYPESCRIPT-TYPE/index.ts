@@ -42,3 +42,7 @@ anything = {};
 anything.fjiafjaj = 'fjaeife';
 let banana = 'banana';
 banana = anything;
+
+let unionType: number | string = 10;
+
+let unionType: (numver | string) [] = [21, 'hello']
