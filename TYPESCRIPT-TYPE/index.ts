@@ -15,10 +15,30 @@ const person = {
   },
   age: 21
 }
+
 const fruits = ['apple', 'banana', 'grape']
 
 const fruit = fruits[0];
 
 const book: [string, number, boolean] = ['business', 1500, false];
-book.push(21)
-console.log(book[3]);
+
+enum CoffeeSize {
+  SHORT= 'SHORT',
+  TALL= 'TALLL',
+  GRANDE= 'GRANDE',
+  VENTI= 'VENTI'
+}
+const coffee = {
+  hot: true,
+  size: CoffeeSize.TALL
+}
+
+coffee.size = CoffeeSize.SHORT;
+
+let anything: any = true;
+anything = 'hello';
+anything = ['hello', 33, true];
+anything = {};
+anything.fjiafjaj = 'fjaeife';
+let banana = 'banana';
+banana = anything;
