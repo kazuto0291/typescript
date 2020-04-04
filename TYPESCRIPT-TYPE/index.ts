@@ -44,5 +44,16 @@ let banana = 'banana';
 banana = anything;
 
 let unionType: number | string = 10;
+let unionTypes: (number | string) [] = [21, 'hello']
 
-let unionType: (numver | string) [] = [21, 'hello']
+
+
+const apple = 'apple';
+let clothSize: 'small' | 'midium' | 'large' = 'large'
+const cloth: {
+  color: string;
+  size: 'small' | 'medium' | 'large'
+} = {
+  color: 'white',
+  size: clothSize
+}
