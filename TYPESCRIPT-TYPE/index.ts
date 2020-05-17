@@ -39,3 +39,66 @@ const book: [string, number, boolean] = ['business', 1500, false];
 // book[1] = ture;
 
 
+// Enumを使って、特定のまとまったグループのみを受け入れる列挙型を使う方法
+// Enumをしてするときは全部大文字が主流、先頭の変数名も大文字が一般的
+// const CoffeeSize = {
+//   SHORT: 'SHORT',
+//   TALL: 'TALL',
+//   GRANDE: 'GRANDE',
+//   VENTI: 'VENTI'
+// }
+//sizeの型がstringなので他の文字列も入れられる
+// 今sizeには特定の４種類しか入れたくないからenumをつかう
+// enum CoffeeSize  {
+//   SHORT = 'SHORT',
+//   TALL = 'TALL',
+//   GRANDE = 'GRANDE',
+//   VENTI = 'VENTI'
+// }
+//＝を省略できる
+enum CoffeeSize  {
+  SHORT,
+  TALL,
+  GRANDE,
+  VENTI
+}
+const coffee = {
+  hot: true,
+  size: CoffeeSize.TALL
+}
+
+coffee.size =CoffeeSize.SHORT;
+
+//どんな方も入るany型
+//とてもカオスなので使わないようにする
+// JS→TSに以降の時有り
+let anything: any = true;
+anything = 'hello';
+anything  = ['hello', 33, true];
+anything = {};
+anything.fjiafja = 'faifai';
+
+// Union型を使って複数の型を使う方法
+//したはnumberもstringも扱えるよの意味
+let unionType:number | string = 10;
+let unionTypes: (number | string)[] = [21, 'hello']
+
+// Literal型を使って複雑な型を変数のように扱う
+// リテラル型は特定の決まった値のみを扱う型
+// constを使うとリテラル型になる
+const apple: 'apple' = 'apple';
+const mikan: 0 = 0;
+
+// リテラル型とユニオン型を組み合わせるとEnum型に似たのが作れる
+// 基本的にはEunm型の方が良いが候補が２〜３個のときは使ってもいい
+type ClothSize = 'small' | 'medium' | 'large'
+let clothSize: ClothSize = 'medium';
+const cloth: {
+  color: string;
+  size: ClothSize
+} = {
+  color: 'white',
+  size: clothSize
+}
+cloth.size = "small"
+
