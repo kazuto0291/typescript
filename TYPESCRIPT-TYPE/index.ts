@@ -102,3 +102,8 @@ const cloth: {
 }
 cloth.size = "small"
 
+// 関数に型
+
+function add(num1: number, num2: number): number {
+  return num1 + num2
+}
