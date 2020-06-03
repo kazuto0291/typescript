@@ -62,5 +62,17 @@
 
     /* Advanced Options */
     "forceConsistentCasingInFileNames": true  /* Disallow inconsistently-cased references to the same file. */
-  }
+  },
+  "include": ["index.ts"],
+  "exclude":[
+    "compiler.ts",
+    "*.spec.ts",
+    "tmp/com.ts",
+    "**/comp.ts",
+    "node_modules"
+  ],
+  "files": [
+    "tmp/compiler.ts"
+  ]
+
 }
