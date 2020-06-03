@@ -135,3 +135,17 @@ function doubleAndHNdle(num: number, cb: (num:number) => number): void {
 doubleAndHNdle(21, doubleNum => {
   return doubleNum
 });
+
+// unknown型を使ってanyより柔軟で厳しい型を定義する方法
+let unknownInput: unknown;
+let anyInput: any;
+let text: string;
+unknownInput = 'hello';
+unknownInput = 21;
+unknownInput = true;
+// text = unknownInput;//使えない
+text = anyInput;
+//typeof でその変数がどのような型みて、if文で求める型が帰ってきたときにunknown型が使える
+if (typeof unknownInput === 'string') {
+  text = unknownInput;
+}
