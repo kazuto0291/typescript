@@ -4,14 +4,18 @@ console.log('Hello');
 let hi ='he';
 console.log(hi.toUpperCase())
 
-function echo(message:string): string | null {
-  return message;
+
+let globalHello = 'hello';
+function echo(message:string): string | undefined {
+  if (message) {
+    return message;
+  };
 }
 
 let impliciAny;
 impliciAny = 'implicitAny';
 
-let nullableMessage: string | null = echo('hi');
+let nullableMessage: string | undefined = echo('hi');
 let undefindableMessage: string | undefined = undefined;
 let onlyNUll: null = null;
 let onlyUNdefined: undefined =undefined
