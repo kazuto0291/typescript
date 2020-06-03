@@ -112,3 +112,15 @@ function add(num1: number, num2: number): number {
 function sayHello(): void {
   console.log('Hello!');
 }
+
+console.log(sayHello());
+let tmp: undefined =  null;
+let tmpNUll: null  =undefined;
+
+//関数を保持する変数に型をつける
+
+const anotherAdd: (n1: number, n2: number) =>number = add;
+
+const doubleNumber = (num: number): number => num * 2;
+
+const doubleNumber1: (num: number) =>number = num=> num * 2;
