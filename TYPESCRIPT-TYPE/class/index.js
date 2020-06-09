@@ -1,6 +1,6 @@
 var Person = /** @class */ (function () {
-    function Person(initName, initAge) {
-        this.name = initName;
+    function Person(name, initAge) {
+        this.name = name;
         this.age = initAge;
     }
     Person.prototype.incrementAge = function () {
