@@ -39,6 +39,12 @@ var Teacher = /** @class */ (function (_super) {
             }
             return this._subject;
         },
+        set: function (value) {
+            if (!value) {
+                throw new Error('There is no subject.');
+            }
+            this._subject = value;
+        },
         enumerable: true,
         configurable: true
     });
@@ -49,4 +55,5 @@ var Teacher = /** @class */ (function (_super) {
 }(Person));
 var teacher = new Teacher('kaka', 33, 'Math');
 teacher.greeting();
+teacher.subject = '';
 console.log(teacher.subject);
