@@ -27,6 +27,7 @@ var Person = /** @class */ (function () {
     };
     Person.prototype.greeting = function () {
         console.log("Hello! My name is " + this.name + ". I am " + this.age + " years old");
+        this.explainJob();
     };
     Person.species = 'Homo sapiens';
     return Person;
@@ -38,6 +39,9 @@ var Teacher = /** @class */ (function (_super) {
         _this._subject = _subject;
         return _this;
     }
+    Teacher.prototype.explainJob = function () {
+        console.log("I am a teacher and I teach " + this.subject);
+    };
     Object.defineProperty(Teacher.prototype, "subject", {
         get: function () {
             if (!this._subject) {
@@ -54,12 +58,7 @@ var Teacher = /** @class */ (function (_super) {
         enumerable: true,
         configurable: true
     });
-    Teacher.prototype.greeting = function () {
-        console.log("Hello! My name is " + this.name + ". I am " + this.age + " years old. I teach " + this.subject + ".");
-    };
     return Teacher;
 }(Person));
-console.log(Person.species);
-console.log(Person.isAdult(38));
-console.log(Teacher.species);
-console.log(Teacher.isAdult(38));
+var teacher = new Teacher('kaka', 33, 'Math');
+teacher.greeting();
