@@ -17,12 +17,18 @@ var Person = /** @class */ (function () {
         this.age = age;
         this.id = 32;
     }
+    Person.isAdult = function (age) {
+        if (age > 17)
+            return true;
+        return false;
+    };
     Person.prototype.incrementAge = function () {
         this.age += 1;
     };
     Person.prototype.greeting = function () {
         console.log("Hello! My name is " + this.name + ". I am " + this.age + " years old");
     };
+    Person.species = 'Homo sapiens';
     return Person;
 }());
 var Teacher = /** @class */ (function (_super) {
@@ -53,7 +59,7 @@ var Teacher = /** @class */ (function (_super) {
     };
     return Teacher;
 }(Person));
-var teacher = new Teacher('kaka', 33, 'Math');
-teacher.greeting();
-teacher.subject = '';
-console.log(teacher.subject);
+console.log(Person.species);
+console.log(Person.isAdult(38));
+console.log(Teacher.species);
+console.log(Teacher.isAdult(38));
