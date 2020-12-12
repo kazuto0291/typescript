@@ -1,5 +1,7 @@
-interface Human  {
+interface Nameable {
   name: string;
+}
+interface Human extends Nameable {
   age: number;
   greeting(message: string): void;
 }
@@ -32,3 +34,4 @@ const tmpDeveloper = {
 
 const user: Human = new Developer('Qill',38 ,3);
 const user7: Human = tmpDeveloper;
+user.age = 22;
