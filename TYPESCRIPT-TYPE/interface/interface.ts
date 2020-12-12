@@ -1,5 +1,21 @@
+// type addFunc = (num1: number,num: number) => number;
+
+interface addFunc {
+  (num1: number, num2: number): number;
+}
+let addFunc: addFunc;
+addFunc = (n1: number ,n2: number) => {
+  return n1 + n2;
+};
+
 interface Nameable {
   name: string;
+  nickName?: string;
+}
+
+const nameable : Nameable = {
+  name: 'quill',
+  nickName: "quill"
 }
 interface Human extends Nameable {
   age: number;
@@ -14,7 +30,7 @@ const human: Human = {
   }
 }
 
-let tmpFunc: (message: string) => void;
+let tmpFunc: (messageddddd: string) => void;
 
 class Developer implements Human {
   constructor(public name: string, public age: number, public experience: number) {}
