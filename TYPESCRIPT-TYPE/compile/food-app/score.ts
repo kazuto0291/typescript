@@ -1,4 +1,7 @@
-class Score implements Scoreable {
+import { Scoreable } from "./interfaces.js"
+import { Foods } from "./foods.js"
+
+export class Score implements Scoreable {
   // 何回もオブジェクトを生成するとメモリを食うのでシングルトーンパターンを使って一回のみしか生成しないようにする。
   private static instance: Score;
   get totalScore() {

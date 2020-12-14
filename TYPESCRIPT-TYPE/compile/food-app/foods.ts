@@ -1,4 +1,6 @@
-class Foods implements Foodsable{
+import { Foodsable } from "./interfaces.js"
+import { Food } from "./food.js"
+export class Foods implements Foodsable{
   // 何回もオブジェクトを生成するとメモリを食うのでシングルトーンパターンをつかう
   private static instance: Foods;
   // index.htmlのclassがfoodの要素をすべて取得する
