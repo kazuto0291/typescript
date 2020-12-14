@@ -88,4 +88,5 @@ class Foods implements Foodsable{
   }
 }
 
+
 const foods = Foods.getInstance();
