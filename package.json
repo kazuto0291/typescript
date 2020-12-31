@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/kazuto0291/typescript/issues"
   },
-  "homepage": "https://github.com/kazuto0291/typescript#readme"
+  "homepage": "https://github.com/kazuto0291/typescript#readme",
+  "keywords": [],
+  "devDependencies": {
+    "webpack": "^5.11.1",
+    "webpack-cli": "^4.3.0"
+  }
 }
